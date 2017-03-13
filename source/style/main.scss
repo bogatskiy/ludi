@@ -1,0 +1,12 @@
+@import "normalize";
+
+@import "helpers/*.scss";
+
+@import "blocks/*.scss";
+
+body {
+  font-family: 'Futura','Arial',sans-serif;
+  font-size: 16px;
+  color: $fontColor;
+  min-width: 320px;
+}

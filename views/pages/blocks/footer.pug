@@ -1,0 +1,24 @@
+footer.footer
+  .container
+    .footer__inner
+      .footer__item.footer__item--social
+        h1.footer__item-title(alt='Ресторан Бар "Люди"')
+          a.footer__title-link
+            svg
+              use(xmlns="http://www.w3.org/2000/svg" xlink:href='/assets/img/sprite.svg#ludi')
+        p.footer__desc Подписывайтесь на наши страницы в социальных сетях и первыми узнавайте новости о проводимых мероприятиях и акциях.
+        include social
+      .footer__item.footer__item--location
+        h4.footer__item-title Наш Адрес
+        p.footer__desc
+          | Россия, Краснодарский край
+          br
+          | с. Эсто-Садок
+          br
+          | ул. Горная Карусель, д. 6, Апарт 28
+          br
+          | тел: 8.928.445.51.50
+      .footer__item.footer__item--reserve
+        h4.footer__item-title Забронировать стол
+        a.footer__link(href='callto:89284455150') 8.928.445.51.50
+        a.footer__link.footer__link--btn(href='callto:89284455150') Забронировать сейчас

@@ -1,0 +1,19 @@
+-
+  var splash = [
+    ['Стейки', 'Из мраморной говядины', 'steak'],
+    ['Коктейли', 'Самый большой выбор', 'cocktail'],
+    ['Музыка', 'Вечерние Pre-party', 'dj']
+  ]
+
+.splash
+  .container
+    .splash__inner
+      ul.splash__list
+        each val, i in splash
+          li.splash__item
+            .splash__text-box
+              p.splash__text.splash__text--1= val[0]
+              p.splash__text.splash__text--2= val[1]
+            .splash__img-box
+              svg
+                use(xmlns="http://www.w3.org/2000/svg" xlink:href=`/assets/img/sprite.svg#${val[2]}`)

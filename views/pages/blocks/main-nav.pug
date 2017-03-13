@@ -1,0 +1,10 @@
+nav.main-nav
+  div.main-nav__toggle
+    span
+  ul.main-nav__list
+    each href, link in mainNav
+      li.main-nav__item
+        if link === page
+          a.main-nav__link.active(href=href)= link
+        else
+          a.main-nav__link(href=href)= link

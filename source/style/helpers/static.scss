@@ -1,0 +1,17 @@
+.container {
+  max-width: 440px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  @include mobile {
+  }
+
+  @include tablet {
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

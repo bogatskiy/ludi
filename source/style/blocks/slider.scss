@@ -1,0 +1,19 @@
+.slider {
+  &__list {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  &__item {
+    width: 130%;
+    height: 242px;
+    background-image: url(/assets/img/slider/slide1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  @include mobile {
+
+  }
+}

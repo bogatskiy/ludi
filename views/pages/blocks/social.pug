@@ -1,0 +1,7 @@
+-var social = {insta: 'https://www.instagram.com/ludi_restobar/',fb: 'https://www.facebook.com/ludirestobar',trip: 'https://www.tripadvisor.ru/Restaurant_Review-g3206479-d12048560-Reviews-Lyudi_Restaurant_Bar-Esto_Sadok_Adler_District_Sochi_Greater_Sochi_Krasnodar_Kr.html'}
+ul.social
+  each val, key in social
+    li.social__item
+      a.social__link(href=val,target='_blank')
+        svg
+          use(xmlns="http://www.w3.org/2000/svg" xlink:href=`/assets/img/sprite.svg#${key}`)

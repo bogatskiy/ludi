@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    meta(charsert='utf-8')
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    link(rel='stylesheet' href='/assets/css/foundation.css')
+    link(rel='stylesheet' href='assets/css/main.css')
+    script(src='/assets/js/foundation.js' defer)
+    script(src='/assets/js/app.js' defer)
+    //title= title
+    title= `Ресторан Люди - ${page}`
+  body
+    include ../blocks/header
+    block content
+    include ../blocks/footer
