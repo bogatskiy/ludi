@@ -67,3 +67,24 @@ function sendMailData(url, data, cb) {
   };
   xhr.send(JSON.stringify(data));
 }
+
+const menuToggle = $('.main-nav__toggle')
+document.querySelector('.main-nav__list').style.display = 'none'
+
+if (menuToggle) {
+  menuToggle.on('click', menuOpen)
+}
+
+function menuOpen() {
+  let menu = $('.main-nav__list')
+
+
+
+  if (menu.css('display') === 'none') {
+    menuToggle.addClass('main-nav__toggle--open')
+    menu.show(300)
+  } else {
+    menuToggle.removeClass('main-nav__toggle--open')
+    menu.hide(300)
+  }
+}
