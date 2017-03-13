@@ -67,29 +67,3 @@ function sendMailData(url, data, cb) {
   };
   xhr.send(JSON.stringify(data));
 }
-
-
-
-//
-// const menuToggle = document.querySelector('.main-nav__toggle span');
-// const menu = document.querySelector('.main-nav__list');
-//
-// if (menuToggle) {
-//   menuToggle.addEventListener('click', openMenu);
-//   menu.style.display = ''
-//   menuToggle.innerHTML = 'Открыть меню'
-// }
-//
-//
-// function openMenu() {
-//
-//   if (menu.style.display === 'flex') {
-//     menu.style.display = 'none'
-//     menuToggle.innerHTML = 'Открыть меню'
-//   } else {
-//     menu.style.display = 'flex'
-//     menuToggle.innerHTML = 'Закрыть меню'
-//   }
-// }
-//
-//
