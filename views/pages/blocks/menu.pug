@@ -305,7 +305,7 @@
                   div.food-menu__category-name=item.name
                   if item.img
                     div.food-menu__img
-                      img(src=`/assets/img/food/${item.img}`)
+                      img(src=`/assets/img/food/${item.img}` alt=item.name)
                   if item.desc
                     div.food-menu__category-desc=item.desc
                   if item.unit
