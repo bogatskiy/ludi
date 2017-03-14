@@ -90,3 +90,16 @@ function menuOpen() {
     menu.hide(300)
   }
 }
+
+
+$(document).ready(function(){
+  $('.food-menu__item-title').click(function(){
+    if(!$(this).hasClass('active')){
+      $('.food-menu__item-title').removeClass('active').next('ul').slideUp();
+      $(this).addClass('active');
+      $(this).next('ul').slideDown(200);
+    } else {
+      $(this).removeClass('active').next('ul').slideUp();
+    }
+  });
+});
