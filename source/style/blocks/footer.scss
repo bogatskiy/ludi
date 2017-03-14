@@ -9,12 +9,13 @@
   &__item-title {
     margin: 0 0 9px;
     font: 22px/26px 'Alegreya Sans', Arial, sans-serif;
+    color: $fontColor-white;
   }
   &__title-link {
     display: block;
     text-align: left;
     & svg {
-      fill: $fontColor;
+      fill: $fontColor-white;
       display: block;
       height: 26px;
       width: 75px;
