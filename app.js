@@ -38,8 +38,8 @@ app.use(function (err, req, res, next) {
     .render('500');
 });
 
-// server.listen(80, '188.166.95.105');
-server.listen(3000, 'localhost');
+server.listen(80, '188.166.95.105');
+// server.listen(3000, 'localhost');
 server.on('listening', function () {
   if (!fs.existsSync(uploadDir)) {
     fs.mkdirSync(uploadDir);
