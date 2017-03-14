@@ -7,9 +7,9 @@
     flex-direction: column;
   }
   &__logo {
-    display: block;
+    display: flex;
+    width: 50%;
     & svg {
-      width: 50%;
       height: 53px;
       margin: 0 auto 0px;
       display: block;
@@ -19,6 +19,8 @@
   }
   &__title {
     margin: 0;
+    display: flex;
+    justify-content: center;
   }
 
   @include mobile {
