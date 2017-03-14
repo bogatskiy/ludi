@@ -1,6 +1,7 @@
 .food-menu {
   padding: 10px 0 30px;
   &__title {
+    color: $fontColor-bronze;
     text-align: center;
     margin: 10px 0 5px;
     font-weight: 400;
@@ -17,13 +18,15 @@
     }
   }
   &__item-title {
+    user-select: none;
     cursor: pointer;
     margin: 0;
     padding: 5px 10px;
-    background-color: $fontColor;
-    color: $fontColor-white;
+    box-shadow: inset 0 0 0 1px $fontColor;
+    color: $fontColor;
     font-size: 1.3rem;
-    font-weight: 700;
+    font-weight: 400;
+    border-radius: 3px;
   }
   &__category-list {
     display: none;
@@ -44,6 +47,7 @@
   &__category-desc {
     margin-bottom: 5px;
     font-size: 0.7rem;
+    text-transform: uppercase;
   }
   &__category-weight {
     text-align: right;

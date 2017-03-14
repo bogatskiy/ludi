@@ -38,14 +38,14 @@
   },
   {
   name: 'АССОРТИ МЯСНЫХ ИЗДЕЛИЙ',
-  desc: 'Утиная грудка копченая и выдержаная в бальзамическом маринаде, мраморная говяжья грудинка горячего копче- ния, мягкая свиная шея запеченая в специях.',
+  desc: 'Утиная грудка копченая и выдержаная в бальзамическом маринаде, мраморная говяжья грудинка горячего копчения, мягкая свиная шея запеченая в специях.',
   descEn: 'Smoked duck breast seasoned in balsamic marinade; hot-smoked marble beef brisket; soft pork neck baked with spices.',
   price: '1300',
   weight: '340'
   },
   {
   name: 'СЫРНАЯ ТАРЕЛКА',
-  desc: 'Шевр, сыр бри с белой плесенью, грана подано, гор- гонзола, рикота собственного копчения.',
+  desc: 'Шевр, сыр бри с белой плесенью, грана подано, горгонзола, рикота собственного копчения.',
   descEn: 'Chevre, Brie cheese with white mold, Grana Padano, Gorgonzola, smoked ricotta cheese and crispy greens.',
   price: '1300',
   weight: '340'
@@ -77,7 +77,7 @@
   'Салаты': [
   {
   name: 'САЛАТ С ДВУМЯ СЫРАМИ',
-  desc: 'С жаренным сыром Бри и сыром рикота соб- ственного копчения. Подаем с миксом салата, вяленными томатами, песто из базилика и кедровых орехов и томатным песто.',
+  desc: 'С жаренным сыром Бри и сыром рикота собственного копчения. Подаем с миксом салата, вяленными томатами, песто из базилика и кедровых орехов и томатным песто.',
   descEn: 'Salad with fried Brie cheese and smoked ricotta cheese. It is served with lettuce mix, dried tomatoes, basil and pine nuts pesto and pesto.',
   price: '530',
   weight: '210'
@@ -91,14 +91,14 @@
   },
   {
   name: 'САЛАТ ИЗ ФИЛЕ КРОЛИКА',
-  desc: 'Обжаренном в слайсах бекона. Подаем с кус-ку- сом, жаренным ассорти грибов, морковно-тмино- вым соусом, томатами черри, оливковым маслом, слайсами моркови.',
+  desc: 'Обжаренном в слайсах бекона. Подаем с кус-кусом, жаренным ассорти грибов, морковно-тминовым соусом, томатами черри, оливковым маслом, слайсами моркови.',
   descEn: 'Salad with rabbit fillet fried in bacon slices. It is served with couscous, assorted fried mushrooms, carrot and caraway sauce, cherry tomatoes, olive oil, carrot slices.',
   price: '420',
   weight: '200'
   },
   {
   name: 'САЛАТ С ПАРМОЙ И ГРУШЕЙ',
-  desc: 'приготовленной методом су-вид с копченой папри- кой. Подаем с песто из базилика и кедрового ореха и томатным песто.',
+  desc: 'приготовленной методом су-вид с копченой паприкой. Подаем с песто из базилика и кедрового ореха и томатным песто.',
   descEn: 'Salad with Parma and sous-vide pears with smoked paprika. It is served with basil and pine nuts pesto and tomato pesto.',
   price: '370',
   weight: '210'
@@ -197,14 +197,14 @@
   },
   {
   name: 'БУРГЕР С ГОВЯДИНОЙ',
-  desc: 'С рубленной котлетой из мраморной говядины, луком конфи, беконом, свежими ломтиками по- мидора и 2 соусами: Дольче Форте и Сальса.',
+  desc: 'С рубленной котлетой из мраморной говядины, луком конфи, беконом, свежими ломтиками помидора и 2 соусами: Дольче Форте и Сальса.',
   descEn: 'Burger with minced marble beef cutlet, onion confit, bacon, fresh tomato slices and two sauces: Dolce Forte and Salsa.',
   price: '950',
   weight: '470'
   },
   {
   name: 'БУРГЕР С КРЕВЕТКОЙ',
-  desc: 'С котлетой из тигровых креветок, миксом салата, соусом вассаби, сыром пармезан и соусом гуако- моле.',
+  desc: 'С котлетой из тигровых креветок, миксом салата, соусом вассаби, сыром пармезан и соусом гуакомоле.',
   descEn: 'Burger with tiger shrimp steak, lettuce mix, wasabi sauce, parmesan cheese and guacamole sauce.',
   price: '1050',
   weight: '280'
@@ -213,7 +213,7 @@
   'Стейки': [
   {
   name: 'ТОМАГАВК',
-  desc: 'Стейк Томагавк — это рибай на кости, у которого реберная кость сохранена почти полностью. Имеет насы- щенный говяжий аромат и превосходную мраморную текстуру. По праву считается одним из самых нежных и сочных стейков',
+  desc: 'Стейк Томагавк — это рибай на кости, у которого реберная кость сохранена почти полностью. Имеет насыщенный говяжий аромат и превосходную мраморную текстуру. По праву считается одним из самых нежных и сочных стейков',
   descEn: '',
   price: '790',
   weight: '100'
@@ -253,7 +253,8 @@
   desc: '',
   descEn: '',
   price: '550',
-  weight: '100'
+  weight: '100',
+  unit: 'шт'
   },
   {
   name: 'СИБАС НА ГРИЛЕ',
@@ -274,14 +275,14 @@
   desc: '',
   descEn: '',
   price: '370',
-  weight: '100'
+  weight: '100',
   }
   ]
   }
 
 .food-menu
   .container
-    h1.food-menu__title Наше Меню
+    h1.food-menu__title Меню
     ul.food-menu__list
       each key, val in foodMenu
         li.food-menu__item
@@ -291,6 +292,11 @@
               each item in key
                 li.food-menu__category-item
                   div.food-menu__category-name=item.name
-                  div.food-menu__category-desc=item.desc
-                  div.food-menu__category-weight
-                    = `${item.weight}гр/${item.price}₽`
+                  if item.desc
+                    div.food-menu__category-desc=item.desc
+                  if item.unit
+                    div.food-menu__category-weight
+                      = `${item.weight}${item.unit}/${item.price}₽`
+                  else
+                    div.food-menu__category-weight
+                      = `${item.weight}гр/${item.price}₽`
