@@ -38,4 +38,3 @@ build
 node_modules
 npm-debug.log
 source
-/app.js
