@@ -1,12 +1,14 @@
 doctype html
 html
   head
-    meta(charsert='utf-8', name="viewport", content="width=device-width,initial-scale=1")
+    meta(charsert='utf-8')
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    meta(name="description", content='Ресторан в центре курорта "Горки город", с широким выбором мясных блюд и богатой коктейльной картой. В основе меню стейки и авторские коктейли')
     link(rel='stylesheet' href='/assets/css/foundation.css')
     link(rel='stylesheet' href='assets/css/main.css')
     script(src='/assets/js/foundation.js' defer)
     script(src='/assets/js/app.js' defer)
-    title= `Ресторан Люди - ${page}`
+    title Ресторан Люди
   body
     include ../blocks/header
     block content
