@@ -11,14 +11,18 @@
     padding: 0;
   }
   &__item {
-    padding: 5px 0px;
     box-sizing: border-box;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
   }
   &__item-title {
     margin: 0;
     padding: 5px 10px;
     background-color: $fontColor;
     color: $fontColor-white;
+    font-size: 1.3rem;
+    font-weight: 700;
   }
   &__category-list {
     list-style: none;
@@ -30,7 +34,18 @@
     &:not(:last-child) {
       margin-bottom: 15px;
     }
-
+  }
+  &__category-name {
+    color: $fontColor-bronze;
+    margin-bottom: 5px;
+  }
+  &__category-desc {
+    margin-bottom: 5px;
+    font-size: 0.7rem;
+  }
+  &__category-weight {
+    text-align: right;
+    color: $fontColor-bronze;
   }
 
 }
