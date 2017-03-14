@@ -93,7 +93,8 @@ function menuOpen() {
 
 $(document).ready(function(){
   $('.food-menu__item-title').click(function(){
-    $(this).toggleClass('active');
+    // $('.food-menu__toggle').toggleClass('food-menu__toggle--open');
+    $(this).find('.food-menu__toggle').toggleClass('food-menu__toggle--open');
     $(this).next('ul').slideToggle(200);
   });
 });

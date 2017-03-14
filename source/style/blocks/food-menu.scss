@@ -1,5 +1,44 @@
 .food-menu {
   padding: 10px 0 30px;
+  &__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 50%;
+    right: 10px;
+    overflow: hidden;
+    transform: translateY(-50%);
+    & span {
+      transition: 0.3s;
+      display: block;
+      width: 21px;
+      height: 1px;
+      background-color: $fontColor-bronze;
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+    &--open {
+      & span {
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+        &:last-child {
+          transform: rotate(-45deg) translateX(1px);
+        }
+        &:first-child {
+          transform: rotate(45deg) translateX(1px);
+        }
+        &:nth-child(2) {
+          transform: translateX(50px);
+        }
+      }
+    }
+  }
   &__title {
     color: $fontColor-bronze;
     text-align: center;
@@ -19,6 +58,7 @@
   }
   &__item-title {
     user-select: none;
+    position: relative;
     cursor: pointer;
     margin: 0;
     padding: 5px 10px;
@@ -53,5 +93,17 @@
     text-align: right;
     color: $fontColor-bronze;
   }
-
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    height: 50vw;
+    max-height: 225px;
+    overflow: hidden;
+    & img {
+      width: 100%;
+      display: block;
+    }
+  }
 }
