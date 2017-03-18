@@ -1,0 +1,26 @@
+-
+  var djs = {
+  semenets: {
+  name: "Andrey Semenets",
+  city: "Сочи",
+  img: "semenets.jpg",
+  desc: "Яркий предствитель сочинской клубной культуры. DJ с отменным музыкальным вкусом."
+  },
+  prost: {
+  name: "Dima Prost",
+  city: "Сочи",
+  img: "prost.jpg",
+  desc: "Старый Морской Волк"
+  }
+  }
+
+
+each dj in djs
+  .dj
+    h2.dj__title= dj.name
+    p.dj__city= dj.city
+    .dj__img
+      img(src=`/assets/img/djs/${dj.img}`)
+    .dj__about
+      p.dj__desc= dj.desc
+    .dj__music
