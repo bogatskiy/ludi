@@ -22,6 +22,7 @@ app.use(express.static(path.join(__dirname, currentStatic)));
 
 app.use('/', require('./routes/index'));
 app.use('/menu', require('./routes/menu'));
+app.use('/music', require('./routes/music'));
 app.use('/about', require('./routes/about'));
 app.use('/contact', require('./routes/contact'));
 
