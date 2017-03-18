@@ -14,7 +14,4 @@ nav.main-nav
   ul.main-nav__list
     each href, link in mainNav
       li.main-nav__item
-        if link === page
-          a.main-nav__link.active(href=href)= link
-        else
-          a.main-nav__link(href=href)= link
+        a(class=`main-nav__link`+((link === page) ? ' active' : ''), href=href)= link

@@ -216,6 +216,7 @@
   {
   name: 'БУРГЕР С БАРАНИНОЙ',
   desc: 'С котлетой из баранины, салатом из печенного перца, красным луком, сыром сулугуни и соусом кинзовый айоле с добавлением соуса из 5 перцев.',
+  img: 'burgers/lamp.jpg',
   descEn: 'Burger with lamb cutlet, baked peppers salad, red onion, Suluguni salat, coriander aioli sauce with five peppers sauce.',
   price: '830',
   weight: '300'
@@ -223,6 +224,7 @@
   {
   name: 'БУРГЕР С ГОВЯДИНОЙ',
   desc: 'С рубленной котлетой из мраморной говядины, луком конфи, беконом, свежими ломтиками помидора и 2 соусами: Дольче Форте и Сальса.',
+  img: 'burgers/beef.jpg',
   descEn: 'Burger with minced marble beef cutlet, onion confit, bacon, fresh tomato slices and two sauces: Dolce Forte and Salsa.',
   price: '950',
   weight: '470'
@@ -230,6 +232,7 @@
   {
   name: 'БУРГЕР С КРЕВЕТКОЙ',
   desc: 'С котлетой из тигровых креветок, миксом салата, соусом вассаби, сыром пармезан и соусом гуакомоле.',
+  img: 'burgers/shrimp.jpg',
   descEn: 'Burger with tiger shrimp steak, lettuce mix, wasabi sauce, parmesan salat and guacamole sauce.',
   price: '1050',
   weight: '280'
@@ -239,6 +242,7 @@
   {
   name: 'ТОМАГАВК',
   desc: 'Стейк Томагавк — это рибай на кости, у которого реберная кость сохранена почти полностью. Имеет насыщенный говяжий аромат и превосходную мраморную текстуру. По праву считается одним из самых нежных и сочных стейков',
+  img: 'steak/tom.jpg',
   descEn: '',
   price: '790',
   weight: '100'
@@ -246,6 +250,7 @@
   {
   name: 'РИБАЙ',
   desc: 'Обилие жировых прослоек, которые при жарке быстро тают, делает рибай самым премиальным и сочным из всех стейков.',
+  img: 'steak/ribei.jpg',
   descEn: '',
   price: '1000',
   weight: '100'
@@ -253,6 +258,7 @@
   {
   name: 'ШАТО БРИАН',
   desc: 'Толстый край центральной части говяжьей вырезки. Считается самым аристократическим стейком.',
+  img: 'steak/briand.jpg',
   descEn: '',
   price: '860',
   weight: '100'
@@ -260,6 +266,7 @@
   {
   name: 'ТИ БОН',
   desc: 'Получил свое название по виду мяса на т-образной кости. Он состоит из двух частей — филе-миньона и стриплойна, образуя необычную комбинацию двух вкусов.',
+  img: 'steak/tibon.jpg',
   descEn: '',
   price: '750',
   weight: '100'
@@ -267,43 +274,45 @@
   {
   name: 'СТРИПЛОЙН',
   desc: 'Тонкий филейный край, который состоит из крупных, нежных волокон и обладает более концентрированным и ярким говяжьим вкусом, за что его часто считают традиционно «мужским» блюдом.',
+  img: 'steak/minion.jpg',
   descEn: '',
   price: '720',
   weight: '100'
   }
-  ],
-  'Рыбные Блюда': [
-  {
-  name: 'УСТРИЦЫ',
-  desc: '',
-  descEn: '',
-  price: '550',
-  weight: '1',
-  unit: 'шт'
-  },
-  {
-  name: 'СИБАС НА ГРИЛЕ',
-  desc: '',
-  descEn: '',
-  price: '450',
-  weight: '100'
-  },
-  {
-  name: 'ДОРАДО НА ГРИЛЕ',
-  desc: '',
-  descEn: '',
-  price: '420',
-  weight: '100'
-  },
-  {
-  name: 'ФОРЕЛЬ НА ГРИЛЕ',
-  desc: '',
-  descEn: '',
-  price: '370',
-  weight: '100',
-  }
   ]
   }
+
+//'Рыбные Блюда': [
+//{
+//name: 'УСТРИЦЫ',
+//desc: '',
+//descEn: '',
+//price: '550',
+//weight: '1',
+//unit: 'шт'
+//},
+//{
+//name: 'СИБАС НА ГРИЛЕ',
+//desc: '',
+//descEn: '',
+//price: '450',
+//weight: '100'
+//},
+//{
+//name: 'ДОРАДО НА ГРИЛЕ',
+//desc: '',
+//descEn: '',
+//price: '420',
+//weight: '100'
+//},
+//{
+//name: 'ФОРЕЛЬ НА ГРИЛЕ',
+//desc: '',
+//descEn: '',
+//price: '370',
+//weight: '100',
+//}
+//]
 
 .food-menu
   .container
@@ -321,17 +330,9 @@
               each item in key
                 li.food-menu__category-item
                   div.food-menu__category-name=item.name
-                  if item.img
-                    div.food-menu__img
-                      img(src=`/assets/img/food/${item.img}` alt=item.name)
-                  else
-                    div.food-menu__img
-                      img(src=`/assets/img/food/ludi.png` alt='ludi-restobar')
+                  div.food-menu__img
+                    img(src=`/assets/img/food/` + ((item.img) ? `${item.img}` : 'ludi.png'), alt=item.name)
                   if item.desc
                     div.food-menu__category-desc=item.desc
-                  if item.unit
-                    div.food-menu__category-weight
-                      = `${item.weight}${item.unit}/${item.price}₽`
-                  else
-                    div.food-menu__category-weight
-                      = `${item.weight}гр/${item.price}₽`
+                  div.food-menu__category-weight
+                    = `${item.weight}` + ((item.unit) ? `${item.unit}` : `гр`) + `/${item.price}₽`
