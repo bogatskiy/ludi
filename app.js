@@ -11,17 +11,17 @@ const config = require('./config.json');
 const uploadDir = config.upload;
 const favicon = require('serve-favicon');
 
-const mongoose = require('mongoose');
-mongoose.Promise = global.Promise;
-mongoose.connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`, {
-  user: config.db.user,
-  pass: config.db.password
-}).catch(e => {
-  console.error(e);
-  throw e
-});
-
-require('./models/dj')
+// const mongoose = require('mongoose');
+// mongoose.Promise = global.Promise;
+// mongoose.connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`, {
+//   user: config.db.user,
+//   pass: config.db.password
+// }).catch(e => {
+//   console.error(e);
+//   throw e
+// });
+//
+// require('./models/dj')
 
 
 app.set('views', path.join(__dirname, 'views'));
