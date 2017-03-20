@@ -35,12 +35,13 @@
     "serve-favicon": "^2.4.1"
   },
   "dependencies": {
-    "socket.io": "latest",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "formidable": "^1.1.1",
+    "mongoose": "^4.9.0",
     "morgan": "^1.8.1",
     "nodemailer": "^3.1.4",
-    "nodemailer-smtp-transport": "^2.7.2"
+    "nodemailer-smtp-transport": "^2.7.2",
+    "socket.io": "latest"
   }
 }

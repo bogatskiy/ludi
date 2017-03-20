@@ -1,8 +1,15 @@
 {
-  "upload":"./upload",
+  "upload": "./upload",
   "mail": {
     "subject": "",
     "user": "",
     "pass": ""
+  },
+  "db": {
+    "host": "localhost",
+    "port": "27017",
+    "name": "ludi",
+    "user": "",
+    "password": ""
   }
 }
