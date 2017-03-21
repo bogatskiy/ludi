@@ -53,7 +53,7 @@ app.use(function (err, req, res, next) {
 });
 
 
-server.listen(80, '188.166.95.105');
+server.listen(80, '207.154.227.160');
 // server.listen(3000, 'localhost');
 server.on('listening', function () {
   if (!fs.existsSync(uploadDir)) {
