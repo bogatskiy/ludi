@@ -40,3 +40,13 @@ $.gulp.task('default', $.gulp.series(
     'serve'
   )
 ));
+
+
+let menu = {
+  cold: {
+    title: 'Холодные закуски',
+    goods: [
+
+    ]
+  }
+}

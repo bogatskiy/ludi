@@ -2,14 +2,14 @@
 
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 router.get('/', function (req, res) {
-  let obj = {page: 'Музыка'}
-  const Model = mongoose.model('dj')
+  let obj = {page: 'Музыка'};
+  const Model = mongoose.model('dj');
 
   Model.find().then(djs => {
-    Object.assign(obj, {djs: djs})
+    Object.assign(obj, {djs: djs});
     res.render('pages/music', obj);
   })
 });

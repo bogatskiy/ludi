@@ -22,6 +22,7 @@ mongoose.connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name
 });
 
 require('./models/dj')
+require('./models/menu')
 
 
 app.set('views', path.join(__dirname, 'views'));
@@ -52,9 +53,7 @@ app.use(function (err, req, res, next) {
     .render('500');
 });
 
-
-server.listen(80, '207.154.227.160');
-// server.listen(3000, 'localhost');
+server.listen(config.server.port, config.server.ip);
 server.on('listening', function () {
   if (!fs.existsSync(uploadDir)) {
     fs.mkdirSync(uploadDir);

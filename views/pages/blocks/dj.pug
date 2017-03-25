@@ -29,7 +29,7 @@ each dj in djs
       if dj.sets.length > 0
         each set in dj.sets
           .dj__music-item
-            iframe(width='100%', height='60', src=set, frameborder='0')
+            iframe(width='100%', height='120', src=set, frameborder='0')
 
 
 form.dj__form#djadd(method='post')
@@ -40,3 +40,4 @@ form.dj__form#djadd(method='post')
   input(type='text' name='city' placeholder='city')
   textarea(name='desc' placeholder='desc')
   input(type='submit' value='Добавить Dj')
+
