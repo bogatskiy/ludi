@@ -8,7 +8,7 @@ const MenuItemSchema = new Schema({
   desc: {type: String, required: true},
   descEn: {type: String},
   img: {type: String},
-  weight: {type: Number, required: true},
+  weight: {type: String, required: true},
   price: {type: Number, required: true},
   unit: {type: String}
 });
@@ -17,7 +17,7 @@ const MenuItemSchema = new Schema({
 const MenuSchema = new Schema({
   section: {
     type: String,
-    required: [true, 'Не указано имя Dj']
+    required: [true, 'Не указана группа']
   },
   items: [MenuItemSchema]
 });

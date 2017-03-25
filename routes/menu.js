@@ -1,14 +1,17 @@
 'use strict';
 
-const express = require('express');
-const router = express.Router();
-let menu = require('../data/menu/menu');
+const router = require('express').Router();
+const mongoose = require('mongoose');
 
-let obj = {page: 'Меню'};
-Object.assign(obj, {menu: menu});
 
 router.get('/', function (req, res) {
-  res.render('pages/menu', obj);
+  let obj = {page: 'Меню'};
+  const Model = mongoose.model('menu');
+
+  Model.find().then(menus => {
+    Object.assign(obj, {menu: menus});
+    res.render('pages/menu', obj);
+  })
 });
 
 module.exports = router;

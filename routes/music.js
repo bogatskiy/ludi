@@ -1,7 +1,6 @@
 'use strict';
 
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
 const mongoose = require('mongoose');
 
 router.get('/', function (req, res) {
@@ -13,12 +12,6 @@ router.get('/', function (req, res) {
     res.render('pages/music', obj);
   })
 });
-
-// router.get('/', function (req, res) {
-//   let obj = {page: 'Музыка'}
-//
-//   res.render('pages/music', obj);
-// });
 
 
 router.post('/', (req, res) => {
