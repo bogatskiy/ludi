@@ -2,21 +2,21 @@
   .container
     h1.food-menu__title Меню
     ul.food-menu__list
-      each item in menu
+      each sections in menu
         li.food-menu__item
-          p.food-menu__item-title= item.section
+          p.food-menu__item-title= sections.section
             span.food-menu__toggle
               span
               span
               span
-          if item.items.length > 0
+          if sections.items.length > 0
             ul.food-menu__category-list
-              each i in item.items
+              each item in sections.items
                 li.food-menu__category-item
-                  div.food-menu__category-name=i.name
+                  div.food-menu__category-name=item.name
                   div.food-menu__img
-                    img(src=`/assets/img/food/` + ((i.img) ? `${i.img}` : 'ludi.png'), alt=i.name)
-                  if i.desc
-                    div.food-menu__category-desc=i.desc
+                    img(src=`/assets/img/food/` + ((item.img) ? `${item.img}` : 'ludi.png'), alt=item.name)
+                  if item.desc
+                    div.food-menu__category-desc=item.desc
                   div.food-menu__category-weight
-                    = `${i.weight}` + ((i.unit) ? `${i.unit}` : `гр`) + `/${i.price}₽`
+                    = `${item.weight}` + ((item.unit) ? `${item.unit}` : `гр`) + `/${item.price}₽`

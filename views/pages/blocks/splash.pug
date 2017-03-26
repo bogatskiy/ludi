@@ -1,19 +1,20 @@
 -
   var splash = [
-    ['Стейки', 'Из мраморной говядины', 'steak'],
-    ['Коктейли', 'Самый большой выбор', 'cocktail'],
-    ['Музыка', 'Вечерние Pre-party', 'dj']
+    ['Кухня', 'Стейки, Бургеры, Рыба', 'steak', '/menu'],
+    ['Бар', 'Большой выбор коктейлей', 'cocktail', '/#'],
+    ['Музыка', 'Pre-party с 20:00', 'dj', '/music']
   ]
 
 .splash
   .container
     .splash__inner
       ul.splash__list
-        each val, i in splash
+        each val in splash
           li.splash__item
-            .splash__text-box
-              p.splash__text.splash__text--1= val[0]
-              p.splash__text.splash__text--2= val[1]
-            .splash__img-box
-              svg
-                use(xmlns="http://www.w3.org/2000/svg" xlink:href=`/assets/img/sprite.svg#${val[2]}`)
+            a.splash__link(href=val[3])
+              .splash__text-box
+                p.splash__text.splash__text--1= val[0]
+                p.splash__text.splash__text--2= val[1]
+              .splash__img-box
+                svg
+                  use(xmlns="http://www.w3.org/2000/svg" xlink:href=`/assets/img/sprite.svg#${val[2]}`)
