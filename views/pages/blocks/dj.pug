@@ -1,35 +1,16 @@
-//-
-//  var djs = {
-//  semenets: {
-//  name: "Andrey Semenets",
-//  city: "Сочи",
-//  img: "semenets",
-//  desc: "Яркий предствитель сочинской клубной культуры. DJ с отменным музыкальным вкусом.",
-//  sets: []
-//  },
-//  prost: {
-//  name: "Dima Prost",
-//  city: "Сочи",
-//  img: "prost",
-//  desc: "Старый Морской Волк",
-//  sets: ['https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fanton-bogatskiy%2Fdima-prost-ludi-restobarlive170317_part1%2F&hide_cover=1&mini=1&light=1','https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fanton-bogatskiy%2Fdima-prost-ludi-restobarlive170317_part2%2F&hide_cover=1&mini=1&light=1']
-//  }
-//  }
-
-
 each dj in djs
   .dj
     h2.dj__title= dj.name
     p.dj__city= dj.city
     .dj__img
-      img(src=`/assets/img/djs/${dj.img}.jpg`)
+      img(src=`/assets/img/djs/${dj.img}.jpg` alt=dj.name)
     .dj__about
       p.dj__desc= dj.desc
     .dj__music-list
       if dj.sets.length > 0
         each set in dj.sets
           .dj__music-item
-            iframe(width='100%', height='120', src=set, frameborder='0')
+            iframe(src=set)
 
 
 form.dj__form#djadd(method='post')
