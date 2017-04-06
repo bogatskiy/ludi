@@ -4,7 +4,11 @@ const router = require('express').Router();
 const mongoose = require('mongoose');
 
 router.get('/', function (req, res) {
-  let obj = {page: 'Музыка'};
+  let obj = {
+    page: 'Музыка',
+    title: 'Pre-party вечеринки в Красной Поляне, Наши Dj и их музыка',
+    description: 'Каждую пятницу и субботу, Вы можете прекрасно начать вечер под припатийные сэты наших диджеев. На этой страницей у Вас есть возможность ознакомиться с музыкой наших вечеринок'
+  };
   const Model = mongoose.model('dj');
 
   Model.find().then(djs => {
